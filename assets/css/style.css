@@ -89,6 +89,17 @@ p{
     justify-content: space-between;
 }
 
+.grid{
+    width:100%;
+    display:grid;
+}
+
+.grid-col-3{
+    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-rows:auto;
+    gap:1%;
+}
+
 /* CABECALHO */
 header{
     text-align:center;
@@ -124,8 +135,25 @@ header h1{
     margin-top:20px;
 }
 
+/* anuncios */
+.notice .city{
+    border-bottom: 1px solid #ddd;
+}
+
+.notice article{
+    margin-bottom:30px;
+}
+
+.notice article h4{
+    font-weight: bold;;
+}
+
 @media(max-width:600px){
     .cta article{
         width:100%
+    }
+
+    .grid-col-3{
+        grid:auto / auto
     }
 }
