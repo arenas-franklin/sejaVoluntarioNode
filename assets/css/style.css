@@ -61,3 +61,15 @@ header h1{
     text-transform:uppercase;
     text-shadow:2px 2px  rgba(0,0,0,0.6);
 }
+
+
+/* RODAPE */
+.footer{
+    color:#666;
+    border-top:1px solid #666;
+}
+
+.footer p{
+    text-align: center;
+    padding:30 0 30 0;
+}
