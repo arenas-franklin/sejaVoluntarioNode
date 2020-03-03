@@ -18,9 +18,34 @@ button.btn{
     margin:5px 0; 
 }
 
+/* FORM SEARCH */
+.form-search form{
+    border-bottom:1px solid #ccc;
+    padding-bottom:10px;
+    margin-bottom:10px;
+}
+
+.form-search form.flex{
+    justify-content: start;;
+}
+
+.form-search form input{
+    margin-right:10px;
+    
+}
+
+
+
+
+
 @media(max-width:600px){
     input.col-half{
         width:100%;
+    }
+
+    .form-search input.col-half{
+        width:auto;
+        min-width: 250px;
     }
 }
 
