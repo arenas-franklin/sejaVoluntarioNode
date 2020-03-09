@@ -1,5 +1,6 @@
 //IMPORTACOES 
 const express = require("express")
+const routers = require('./routers')
 
 //INSTANCIA DO FRAMEWORK EXPRESS
 const app = express()
@@ -13,11 +14,7 @@ app.set("views", __dirname + "/src/views")
 app.use(express.static(__dirname + "/public"))
 
 //ROTAS DA APLICAÇÂO
-app.get('/',(req,res)=>res.render("index"))
-app.get('/busca',(req,res)=>res.render("busca"))
-app.get('/cadastro',(req,res)=>res.render("cadastro"))
-app.get('/anuncio',(req,res)=>res.render("anuncio"))
-
+app.use(routers)
 
 // Escutando a prota 3000
 app.listen(3000,()=>console.log("Servidor funcionando na porta 3000."))
