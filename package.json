@@ -4,6 +4,7 @@
   "description": "site de cadastro de voluntarios",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,6 +17,10 @@
   "author": "Franklin Angelo Arenas",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hbs": "^4.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
