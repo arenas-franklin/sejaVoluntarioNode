@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/form.css">
         <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+        <script src="./assets/js/forms.js" defer></script>
     </head>
     <body>
         <main class="container">
@@ -17,15 +18,15 @@
 
             <section class="form row">
                 <h2 class="text-green">Cadastre sua vaga de voluntariado</h2>
-                <form action="/">
+                <form class="flex" onsubmit="return validateNotice(this)">
                     <input type="text" name="email" class="col-full" placeholder="informe o email do resposnsável">
                     
                     <textarea name="descricao" id="descricao" rows="4" placeholder="informe a descrição da vaga"></textarea>
-
+                    
                     <div class="flex">
-                        <input type="text" name="titulo;" placeholder="Informe o titulo da vaga" class="col-half">
+                        <input type="text" name="titulo" placeholder="Informe o titulo da vaga" class="col-half">
                         
-                        <input type="text" name="cidade;" placeholder="Informe a cidade da vaga" class="col-half">
+                        <input type="text" name="cidade" placeholder="Informe a cidade da vaga" class="col-half">
                     </div>
                     <div class="text-right">
                         <button type="submit" class="btn btn-green ">Enviar anuncio</button>

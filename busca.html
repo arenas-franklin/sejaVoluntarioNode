@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/form.css">
         <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+        <script src="./assets/js/forms.js" defer></script>
     </head>
     <body>
         <main class="container">
@@ -19,14 +20,14 @@
             </header>
 
             <section class="notices row">
-               <div class="form form-search">
+                <div class="form form-search">
                    <h2 class="text-blue">Busque uma vaga de voluntariado</h2>
-                   <form action="" class="flex">
+                   <form action="" class="flex" onsubmit="return validateSeach(this)">
                      <input type="text" name="key" class="col-half" placeholder="Entre com o que deseja buscar ...">
                      <button type="submit" class="btn btn-blue">Buscar</button>
                    </form>
                </div>
-                <div class="grid grid-col-3">
+               <div class="grid grid-col-3">
                     <article class="notice">
                         <h4>Acolher refugiados</h4>
                         <p class="city"><strong>Campo Grande-MS</strong></p>
@@ -44,11 +45,11 @@
                             <a href="./anuncio.html" class="btn btn-red">Saiba mais</a>
                         </p>
                     </article>
-
+                    
                 
                 </div>
             </section>
-
+            
             <footer class="footer">
                 <p>
                     <strong>Seja voluntário</strong> - aplicação para fins didatico 
@@ -56,4 +57,4 @@
             </footer>
         </main>
     </body>
-</html>
+    </html>
