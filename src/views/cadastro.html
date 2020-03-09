@@ -18,7 +18,7 @@
 
             <section class="form row">
                 <h2 class="text-green">Cadastre sua vaga de voluntariado</h2>
-                <form class="flex" onsubmit="return validateNotice(this)">
+                <form class="flex" onsubmit="return validateNotice(this)" method="POST" action="/cadastro">
                     <input type="text" name="email" class="col-full" placeholder="informe o email do resposnsável">
                     
                     <textarea name="descricao" id="descricao" rows="4" placeholder="informe a descrição da vaga"></textarea>
