@@ -7,10 +7,10 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Seja Valuntario</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="stylesheet" href="./assets/css/form.css">
-        <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
-        <script src="./assets/js/forms.js" defer></script>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="stylesheet" href="/assets/css/form.css">
+        <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
+        <script src="/assets/js/forms.js" defer></script>
     </head>
     <body>
         <main class="container">
@@ -23,28 +23,26 @@
                 <div class="form form-search">
                    <h2 class="text-blue">Busque uma vaga de voluntariado</h2>
                    <form action="" class="flex" onsubmit="return validateSeach(this)">
-                     <input type="text" name="key" class="col-half" placeholder="Entre com o que deseja buscar ...">
+                     <input type="text" name="key" class="col-half" placeholder="Entre com o que deseja buscar ..." value="{{key}}">
                      <button type="submit" class="btn btn-blue">Buscar</button>
                    </form>
                </div>
                <div class="grid grid-col-3">
+                 {{#if vagas}}   
+                    {{#each vagas}}
                     <article class="notice">
-                        <h4>Acolher refugiados</h4>
-                        <p class="city"><strong>Campo Grande-MS</strong></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor quas, porro sunt totam quo voluptates eos iusto? Facilis blanditiis nam cum reiciendis molestias praesentium reprehenderit tenetur quo a earum?</p>
+                        <h4>{{this.titulo}}</h4>
+                        <p class="city"><strong>{{this.cidade}}</strong></p>
+                        <p>{{this.descricao}}</p>
                         <p>
-                            <a href="./anuncio.html" class="btn btn-red">Saiba mais</a>
+                            <a href="/anuncio/{{this.id}}" class="btn btn-red">Saiba mais</a>
                         </p>
                     </article>
-
-                    <article class="notice">
-                        <h4>Acolher refugiados</h4>
-                        <p class="city"><strong>Campo Grande-MS</strong></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor quas, porro sunt totam quo voluptates eos iusto? Facilis blanditiis nam cum reiciendis molestias praesentium reprehenderit tenetur quo a earum?</p>
-                        <p>
-                            <a href="./anuncio.html" class="btn btn-red">Saiba mais</a>
-                        </p>
-                    </article>
+                    {{/each}}
+                {{else}}
+                    <p>Nenhuma vaga encontrada</p>
+                {{/if}}
+                    
                     
                 
                 </div>

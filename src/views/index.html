@@ -4,13 +4,13 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Seja Valuntario</title>
-        <link rel="stylesheet" href="./assets/css/style.css">
-        <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="shortcut icon" href="/assets/images/logo.png" type="image/x-icon">
     </head>
     <body>
         <main class="container">
             <header class="header row">
-                <img src="./assets/images/logo.png" alt="logo do seja voluntario">
+                <img src="/assets/images/logo.png" alt="logo do seja voluntario">
                 <h1 class="text-red text-shadow">Seja voluntario</h1>
             </header>
             <section class="cta flex row">
@@ -20,7 +20,7 @@
                         Busque uma vaga perto de você e tome uma atitude transformadora ajudando o próximo.
                     </p>
                     <p>
-                        <a href="./busca" class="btn btn-blue">Quero ser valuntario</a>
+                        <a href="/busca" class="btn btn-blue">Quero ser valuntario</a>
                     </p>
                 </article>
                 <article>
@@ -30,57 +30,23 @@
                         cadastre suas vagas e encontre valuntarios ai perto de você.
                     </p>
                     <p>
-                        <a href="./cadastro" class="btn btn-green">Quero anunciar</a>
+                        <a href="/cadastro" class="btn btn-green">Quero anunciar</a>
                     </p>
                 </article>
             </section>
             <section class="notices row">
                 <h3 class="text-red">Últimos anuncio de vagas</h3>
                 <div class="grid grid-col-3">
+                    {{#each vagas}}
                     <article class="notice">
-                        <h4>Acolher refugiados</h4>
-                        <p class="city"><strong>Campo Grande-MS</strong></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor quas, porro sunt totam quo voluptates eos iusto? Facilis blanditiis nam cum reiciendis molestias praesentium reprehenderit tenetur quo a earum?</p>
+                        <h4>{{this.titulo}}</h4>
+                        <p class="city"><strong>{{this.cidade}}</strong></p>
+                        <p>{{this.descricao}}</p>
                         <p>
-                            <a href="./anuncio" class="btn btn-red">Saiba mais</a>
+                            <a href="/anuncio/{{this.id}}" class="btn btn-red">Saiba mais</a>
                         </p>
                     </article>
-
-                    <article class="notice">
-                        <h4>Acolher refugiados</h4>
-                        <p class="city"><strong>Campo Grande-MS</strong></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor quas, porro sunt totam quo voluptates eos iusto? Facilis blanditiis nam cum reiciendis molestias praesentium reprehenderit tenetur quo a earum?</p>
-                        <p>
-                            <a href="./anuncio" class="btn btn-red">Saiba mais</a>
-                        </p>
-                    </article>
-
-                    <article class="notice">
-                        <h4>Acolher refugiados</h4>
-                        <p class="city"><strong>Campo Grande-MS</strong></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor quas, porro sunt totam quo voluptates eos iusto? Facilis blanditiis nam cum reiciendis molestias praesentium reprehenderit tenetur quo a earum?</p>
-                        <p>
-                            <a href="./anuncio" class="btn btn-red">Saiba mais</a>
-                        </p>
-                    </article>
-
-                    <article class="notice">
-                        <h4>Acolher refugiados</h4>
-                        <p class="city"><strong>Campo Grande-MS</strong></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor quas, porro sunt totam quo voluptates eos iusto? Facilis blanditiis nam cum reiciendis molestias praesentium reprehenderit tenetur quo a earum?</p>
-                        <p>
-                            <a href="./anuncio" class="btn btn-red">Saiba mais</a>
-                        </p>
-                    </article>
-
-                    <article class="notice">
-                        <h4>Acolher refugiados</h4>
-                        <p class="city"><strong>Campo Grande-MS</strong></p>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic dolor quas, porro sunt totam quo voluptates eos iusto? Facilis blanditiis nam cum reiciendis molestias praesentium reprehenderit tenetur quo a earum?</p>
-                        <p>
-                            <a href="./anuncio" class="btn btn-red">Saiba mais</a>
-                        </p>
-                    </article>
+                    {{/each}}                   
                 </div>
             </section>
             <footer class="footer">

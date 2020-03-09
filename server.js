@@ -1,5 +1,6 @@
 //IMPORTACOES 
 const express = require("express")
+const bodyParser = require("body-parser")
 const routers = require('./routers')
 
 //INSTANCIA DO FRAMEWORK EXPRESS
@@ -12,6 +13,9 @@ app.set("views", __dirname + "/src/views")
 
 //CONFIGURANDO CONTEUDO STATICS
 app.use(express.static(__dirname + "/public"))
+
+//configurar o request body
+app.use(bodyParser.urlencoded({extended:true}))
 
 //ROTAS DA APLICAÇÂO
 app.use(routers)
